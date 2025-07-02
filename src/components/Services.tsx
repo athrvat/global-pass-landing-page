@@ -22,7 +22,8 @@ const Services = () => {
       description: "New passport, renewal, re-issue, and emergency passport services with fast processing.",
       features: ["Fresh Passport", "Renewal", "Re-issue", "Emergency Services"],
       color: "blue",
-      popular: true
+      popular: true,
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Globe,
@@ -30,63 +31,72 @@ const Services = () => {
       description: "Tourist, business, student, and work visas for all countries with expert guidance.",
       features: ["Tourist Visa", "Business Visa", "Student Visa", "Work Visa"],
       color: "purple",
-      popular: true
+      popular: true,
+      image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: CreditCard,
       title: "Pan Card",
       description: "New Pan Card application, corrections, and duplicate Pan Card services.",
       features: ["New Application", "Corrections", "Duplicate", "Quick Processing"],
-      color: "emerald"
+      color: "emerald",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Car,
       title: "Driving License",
       description: "Learning license, permanent license, renewal, and duplicate license services.",
       features: ["Learning License", "Permanent License", "Renewal", "Duplicate"],
-      color: "orange"
+      color: "orange",
+      image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Shield,
       title: "Aadhar Card",
       description: "Online Aadhar Card services including new enrollment and updates.",
       features: ["New Enrollment", "Updates", "Corrections", "Download"],
-      color: "red"
+      color: "red",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Award,
       title: "Apostille Documents",
       description: "Document apostille services for international use and verification.",
       features: ["Educational Docs", "Personal Docs", "Commercial Docs", "Fast Service"],
-      color: "indigo"
+      color: "indigo",
+      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Building,
       title: "MEA Services",
       description: "Ministry of External Affairs legalization and embassy attestation services.",
       features: ["HRD Attestation", "Embassy Legalization", "MEA Apostille", "Quick Processing"],
-      color: "pink"
+      color: "pink",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: UserCheck,
       title: "Name Change",
       description: "Name change in passport and other official documents with legal support.",
       features: ["Passport Name Change", "Legal Documentation", "Gazette Notification", "Court Affidavit"],
-      color: "teal"
+      color: "teal",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: FileCheck,
       title: "Birth Certificate",
       description: "Birth certificate services including new applications and corrections.",
       features: ["New Certificate", "Corrections", "Duplicate", "Online Service"],
-      color: "cyan"
+      color: "cyan",
+      image: "https://images.unsplash.com/photo-1584467735871-8e3925ddc6e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Calculator,
       title: "GST & ITR",
       description: "GST certificate and Income Tax Return filing services for businesses.",
       features: ["GST Registration", "ITR Filing", "Compliance", "Expert Support"],
-      color: "violet"
+      color: "violet",
+      image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     }
   ];
 
@@ -125,47 +135,63 @@ const Services = () => {
           {services.map((service, index) => {
             const colors = getColorClasses(service.color);
             return (
-              <div key={index} className={`relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border ${colors.border} group hover:scale-105`}>
+              <div key={index} className={`relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border ${colors.border} group hover:scale-105`}>
                 {service.popular && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-amber-400 to-amber-500 text-white px-4 py-1 rounded-full text-xs font-bold shadow-lg">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-400 to-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg z-10">
                     POPULAR
                   </div>
                 )}
                 
-                <div className="flex items-center mb-6">
-                  <div className={`${colors.bg} p-4 rounded-2xl mr-4 group-hover:scale-110 transition-transform`}>
-                    <service.icon className={`w-8 h-8 ${colors.icon}`} />
+                {/* Service image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  
+                  {/* Icon overlay */}
+                  <div className="absolute bottom-4 left-4">
+                    <div className={`${colors.bg} p-3 rounded-xl shadow-lg backdrop-blur-sm bg-white/90`}>
+                      <service.icon className={`w-6 h-6 ${colors.icon}`} />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
                 </div>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                
-                <ul className="space-y-3 mb-8">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-700">
-                      <div className={`w-2 h-2 ${colors.icon.replace('text-', 'bg-')} rounded-full mr-3`}></div>
-                      <span className="font-medium">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className={`group w-full ${colors.button} text-white py-3 rounded-xl font-semibold transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2`}>
-                  Get Started
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">{service.description}</p>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-700">
+                        <div className={`w-2 h-2 ${colors.icon.replace('text-', 'bg-')} rounded-full mr-3`}></div>
+                        <span className="font-medium">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <button className={`group w-full ${colors.button} text-white py-3 rounded-xl font-semibold transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2`}>
+                    Get Started
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
               </div>
             );
           })}
         </div>
         
         <div className="text-center">
-          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Need a Custom Solution?</h3>
-            <p className="text-gray-600 mb-6">We offer personalized services tailored to your specific requirements.</p>
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
-              View All Services & Pricing
-            </button>
+          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto border border-gray-100 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50"></div>
+            <div className="relative z-10">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Need a Custom Solution?</h3>
+              <p className="text-gray-600 mb-6">We offer personalized services tailored to your specific requirements.</p>
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+                View All Services & Pricing
+              </button>
+            </div>
           </div>
         </div>
       </div>

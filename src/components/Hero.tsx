@@ -67,38 +67,36 @@ const Hero = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 backdrop-blur-sm">
-              <div className="flex items-center justify-between mb-8">
-                <h3 className="text-3xl font-bold text-gray-900">Quick Stats</h3>
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              </div>
+            {/* Main hero image */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" 
+                alt="Passport and travel documents" 
+                className="w-full h-96 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
               
-              <div className="grid grid-cols-2 gap-8">
-                <div className="text-center group">
-                  <div className="flex justify-center mb-4">
-                    <div className="bg-gradient-to-r from-blue-100 to-blue-200 p-4 rounded-2xl group-hover:scale-110 transition-transform">
-                      <Users className="w-10 h-10 text-blue-600" />
+              {/* Overlay stats card */}
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-gray-100">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center group">
+                    <div className="flex justify-center mb-3">
+                      <div className="bg-gradient-to-r from-blue-100 to-blue-200 p-3 rounded-xl group-hover:scale-110 transition-transform">
+                        <Users className="w-8 h-8 text-blue-600" />
+                      </div>
                     </div>
+                    <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">10,000+</div>
+                    <div className="text-gray-600 font-medium text-sm">Happy Customers</div>
                   </div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">10,000+</div>
-                  <div className="text-gray-600 font-medium">Happy Customers</div>
-                </div>
-                <div className="text-center group">
-                  <div className="flex justify-center mb-4">
-                    <div className="bg-gradient-to-r from-green-100 to-emerald-200 p-4 rounded-2xl group-hover:scale-110 transition-transform">
-                      <Award className="w-10 h-10 text-green-600" />
+                  <div className="text-center group">
+                    <div className="flex justify-center mb-3">
+                      <div className="bg-gradient-to-r from-green-100 to-emerald-200 p-3 rounded-xl group-hover:scale-110 transition-transform">
+                        <Award className="w-8 h-8 text-green-600" />
+                      </div>
                     </div>
+                    <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">100%</div>
+                    <div className="text-gray-600 font-medium text-sm">Success Rate</div>
                   </div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">100%</div>
-                  <div className="text-gray-600 font-medium">Success Rate</div>
-                </div>
-                <div className="text-center group">
-                  <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">13+</div>
-                  <div className="text-gray-600 font-medium">Years Experience</div>
-                </div>
-                <div className="text-center group">
-                  <div className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">24/7</div>
-                  <div className="text-gray-600 font-medium">Support</div>
                 </div>
               </div>
             </div>
@@ -106,6 +104,21 @@ const Hero = () => {
             {/* Floating elements */}
             <div className="absolute -top-6 -right-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg animate-bounce">
               Express Service Available
+            </div>
+            
+            {/* Additional floating stats */}
+            <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 border border-gray-100">
+              <div className="text-center">
+                <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">13+</div>
+                <div className="text-gray-600 font-medium text-sm">Years Experience</div>
+              </div>
+            </div>
+            
+            <div className="absolute top-1/2 -right-8 bg-white rounded-2xl shadow-xl p-4 border border-gray-100">
+              <div className="text-center">
+                <div className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">24/7</div>
+                <div className="text-gray-600 font-medium text-sm">Support</div>
+              </div>
             </div>
           </div>
         </div>

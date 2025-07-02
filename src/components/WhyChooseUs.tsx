@@ -7,37 +7,43 @@ const WhyChooseUs = () => {
       icon: Zap,
       title: "Lightning Fast Processing",
       description: "Quick turnaround times with express services available for urgent requirements.",
-      color: "yellow"
+      color: "yellow",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Shield,
       title: "100% Safe & Secure",
       description: "Your documents and personal information are completely safe with our secure processes.",
-      color: "green"
+      color: "green",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Users,
       title: "Expert Team",
       description: "Experienced professionals who understand government procedures and requirements.",
-      color: "blue"
+      color: "blue",
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Award,
       title: "Government Approved",
       description: "Authorized service provider with all necessary government approvals and licenses.",
-      color: "purple"
+      color: "purple",
+      image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Phone,
       title: "24/7 Support",
       description: "Round-the-clock customer support to answer your queries and provide assistance.",
-      color: "orange"
+      color: "orange",
+      image: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: CheckCircle,
       title: "100% Success Rate",
       description: "Perfect track record with successful completion of all application processes.",
-      color: "emerald"
+      color: "emerald",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     }
   ];
 
@@ -77,12 +83,29 @@ const WhyChooseUs = () => {
           {reasons.map((reason, index) => {
             const colors = getColorClasses(reason.color);
             return (
-              <div key={index} className="group text-center hover:transform hover:scale-105 transition-all duration-300">
-                <div className={`${colors.bg} w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
-                  <reason.icon className={`w-12 h-12 ${colors.icon}`} />
+              <div key={index} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:scale-105">
+                {/* Image section */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={reason.image} 
+                    alt={reason.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  
+                  {/* Icon overlay */}
+                  <div className="absolute bottom-4 left-4">
+                    <div className={`${colors.bg} w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg backdrop-blur-sm bg-white/90`}>
+                      <reason.icon className={`w-8 h-8 ${colors.icon}`} />
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{reason.title}</h3>
-                <p className="text-gray-600 leading-relaxed px-4">{reason.description}</p>
+                
+                {/* Content section */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{reason.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{reason.description}</p>
+                </div>
               </div>
             );
           })}
@@ -91,6 +114,15 @@ const WhyChooseUs = () => {
         <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 rounded-3xl p-12 text-center text-white relative overflow-hidden">
           {/* Background pattern */}
           <div className="absolute inset-0 bg-white/10 bg-grid-pattern"></div>
+          
+          {/* Background images */}
+          <div className="absolute inset-0 opacity-10">
+            <img 
+              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" 
+              alt="Background" 
+              className="w-full h-full object-cover"
+            />
+          </div>
           
           <div className="relative z-10">
             <h3 className="text-4xl font-bold mb-6">Ready to Get Started?</h3>
