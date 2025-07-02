@@ -1,4 +1,3 @@
-
 import { 
   FileText, 
   CreditCard, 
@@ -7,7 +6,7 @@ import {
   Award, 
   Globe, 
   UserCheck, 
-  Certificate,
+  FileCheck,
   Building,
   Calculator
 } from 'lucide-react';
@@ -63,7 +62,7 @@ const Services = () => {
       features: ["Passport Name Change", "Legal Documentation", "Gazette Notification", "Court Affidavit"]
     },
     {
-      icon: Certificate,
+      icon: FileCheck,
       title: "Birth Certificate",
       description: "Birth certificate services including new applications and corrections.",
       features: ["New Certificate", "Corrections", "Duplicate", "Online Service"]
