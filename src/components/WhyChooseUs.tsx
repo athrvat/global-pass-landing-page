@@ -1,4 +1,3 @@
-
 import { Clock, Shield, Users, Award, Phone, CheckCircle, Zap, Star } from 'lucide-react';
 
 const WhyChooseUs = () => {
@@ -15,39 +14,39 @@ const WhyChooseUs = () => {
       title: "100% Safe & Secure",
       description: "Your documents and personal information are completely safe with our secure processes.",
       color: "green",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Users,
       title: "Expert Team",
       description: "Experienced professionals who understand government procedures and requirements.",
       color: "blue",
-      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://images.unsplash.com/photo-1553028826-f4804151e696?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Award,
       title: "Government Approved",
       description: "Authorized service provider with all necessary government approvals and licenses.",
       color: "purple",
-      image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://images.unsplash.com/photo-1569748130764-3fed0c102c59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Phone,
       title: "24/7 Support",
       description: "Round-the-clock customer support to answer your queries and provide assistance.",
       color: "orange",
-      image: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: CheckCircle,
       title: "100% Success Rate",
       description: "Perfect track record with successful completion of all application processes.",
       color: "emerald",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     }
   ];
 
-  const getColorClasses = (color: string) => {
+  function getColorClasses(color: string) {
     const colorMap: Record<string, { bg: string; icon: string; gradient: string }> = {
       yellow: { bg: "bg-yellow-100", icon: "text-yellow-600", gradient: "from-yellow-400 to-orange-500" },
       green: { bg: "bg-green-100", icon: "text-green-600", gradient: "from-green-400 to-emerald-500" },
@@ -57,7 +56,7 @@ const WhyChooseUs = () => {
       emerald: { bg: "bg-emerald-100", icon: "text-emerald-600", gradient: "from-emerald-400 to-green-500" }
     };
     return colorMap[color] || colorMap.blue;
-  };
+  }
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
@@ -118,7 +117,7 @@ const WhyChooseUs = () => {
           {/* Background images */}
           <div className="absolute inset-0 opacity-10">
             <img 
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" 
+              src="https://images.unsplash.com/photo-1544077960-604201fe74bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" 
               alt="Background" 
               className="w-full h-full object-cover"
             />

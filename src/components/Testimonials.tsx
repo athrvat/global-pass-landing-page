@@ -1,4 +1,3 @@
-
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 
@@ -56,13 +55,13 @@ const Testimonials = () => {
     }
   ];
 
-  const nextTestimonial = () => {
+  function nextTestimonial() {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+  }
 
-  const prevTestimonial = () => {
+  function prevTestimonial() {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  }
 
   const visibleTestimonials = [
     testimonials[currentIndex],
